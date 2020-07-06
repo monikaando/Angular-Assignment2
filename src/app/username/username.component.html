@@ -1,0 +1,23 @@
+
+<!-- 2-ways binding -->
+<label>Username</label>
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="username"
+    (input)="onUpdateUsername($event)" 
+>
+<button class="btn btn-primary" [disabled]="!activeButton" (click)="onResetUsername()">Reset username</button>
+<p>{{ usernameCreationStatus }}</p>
+
+<!-- Teacher Solution
+<!-- 2-ways binding -->
+<!-- <label>Username</label>
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="username"
+>
+<button class="btn btn-primary" [disabled]="username===''" (click)="username=''">Reset username</button>
+<p>{{ username }}</p>  -->
+
